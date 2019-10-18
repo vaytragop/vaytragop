@@ -807,7 +807,7 @@
 
                         <div class="cell-1-2-calc mobile-cell-1-1">
 
-                            <div class="title-calc">Khoản trả góp ngày</div>
+                            <div id="js-id-loading" class="title-calc">Khoản trả góp ngày</div>
 
                         </div>
 
@@ -995,6 +995,8 @@
     function showLoadingIndicator () {
       form.classList.add('is-hidden')
       loading.classList.remove('is-hidden')
+       var elmnt = document.getElementById("js-id-loading");
+       elmnt.scrollIntoView();
     }
 
     formmodal.addEventListener('submit', e => {
